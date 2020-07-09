@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<style>
+#div1 {
+  font-size:48px;
+}
+h1{
+color:black;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<div id="div1" class="fa"></div>
+
+<script>
+function smile() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf118;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf119;";
+    }, 2000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 3000);
+}
+smile();
+setInterval(smile, 4000);
+</script>
+
+<h1><marquee><br><br><br><br><br>THANKS FOR VISITING OUR WEBSITE</br></br></br></br></br></marquee></h1>
+<body style="background-image:url('naga.jpg');
+Background-repeat:no-repeat;background-size:cover; height="75%",width="75%">
+</body>
+</html>

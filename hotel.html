@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .bev{
+        
+    background-image:url(sec.png);
+        background-size:cover;
+        color:white;
+        }
+        .dev{
+    background-color:gray;
+        background-size: 500px 900px;
+            
+            
+        }
+        
+        
+input[type=text] {
+  border: 1px solid green;
+  border-radius: 2px;
+        
+        }
+        .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width:30%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+    </style>
+ <title>Hotel | Booking Form</title>
+   <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/responsiveslides.css">
+<script>
+function fun()
+{
+var x=document.forms["booking"]["username"].value;
+var y=document.forms["booking"]["phone"].value;
+if(x==""||!isNaN(x))
+{
+alert("invalid input-name!!");
+return false;
+}
+if(y==""||isNaN(y))
+{
+alert("invalid input-number!!");
+return false;
+}
+alert("Details submitted succesfully,proceed to pay Book'ID-1234");
+return true;
+}
+</script>
+		</head>
+<body>
+    
+<div class="header">
+				
+				<div class="header-top-nav">
+					<div class="wrap">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+				</div>
+			</div>
+    
+			<div class="clear"> </div>
+<center>
+<div class="bev">
+<form  method="get" name="booking" style="width: 540px" align="center" onsubmit="return fun()">
+<div class="dev">
+<fieldset align="center" style="width:500px">
+<legend><b>Personal Details:</b></legend>
+<label for="name">&nbsp; &nbsp; &nbsp; &nbsp; Name*: </label>
+<input type="text" name="username" id="t1" autofocus placeholder="Your username"  required title="Please enter in more than three letters"><br><br></r>
+<label for="email">&nbsp; &nbsp; &nbsp; &nbsp; Email*: </label>
+<input type="text" name="email" id="email" placeholder="Your Email"  title="Please enter in a valid email address"><br><br>
+<label for="phone">&nbsp; &nbsp; &nbsp; Phone*: </label>
+<input type="tel" name="phone" id="phone" required placeholder="phone number" pattern="[0-9]{10}"><br><br>
+
+
+</fieldset>
+<br>
+<fieldset align="center" style="width:500px">
+<legend><b>Booking Details:</b></legend>
+    <label for="checkin">&nbsp; &nbsp; Arrival Date*-</label>
+<input type="date" required><br><br>
+    <label for="checkout">Departure Date*-</label>
+<input type="date" required><br><br>
+    
+    
+    <label for="adult">Adult: </label><select name="adult">
+<option value="select" required>-select-</option>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+    
+     
+    <label for="kids">&nbsp; &nbsp;  &nbsp;  &nbsp; Kids: </label><select name="kids" >
+<option value="select">-select-</option>   
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+</select>
+<br><br>
+<p>Do you require other services?</p>
+<label>Yes:</label><input id="yes" type="radio" value="yes">
+<label>No:</label><input id="no" type="radio" value="no"><br><br>
+<p>What would you like to prefer?</p>
+<label for="choice">Bar</label><input type="checkbox" value="Restaurants">
+<label for="choice">Restaurant</label><input type="checkbox" value="Bar">  
+    <br><br>
+    <center><input type="submit" value="Submit" class="btn"></center>
+    <a href="payment.html"><u>PROCEED TO PAY</u></a>   
+    </div>
+</form>
+
+    </div>
+    </center>
+</body>
+</html>

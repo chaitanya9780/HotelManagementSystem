@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Hotel | Payments</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/responsiveslides.css">
+        
+        <script>
+        function fun1()
+            {
+                var x=document.forms["payment"]["name"].value;
+                var y=document.forms["payment"]["phone"].value;
+if(x==""||!isNaN(x))
+{
+alert("invalid input-name!!");
+return false;
+}
+if(y==""||isNaN(y))
+{
+alert("invalid input-number!!");
+return false;
+}
+alert("Successfully completed,Book'ID-1234");
+return true;
+}
+            }
+        
+        </script>
+    <style>
+    body{
+           background-image:url(abc.png);
+        background-size:cover;
+        color:white;
+        
+        }
+        legend
+        {
+            font-size: 20px;
+        }
+          label
+        {
+            font-size: 16px;
+        }
+        .sero
+        {
+            background-color: gray;
+             background-size:cover;
+        }
+        
+    </style>
+    </head>
+    <body>
+        <div class="header">
+				
+				<div class="header-top-nav">
+					<div class="wrap">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+				</div>
+			</div>
+    
+			
+        <center>
+<section>
+<form style="width:540px" name="payment" onsubmit="return fun1()">
+    <div class="sero">
+    <fieldset style="width:500px">
+         <legend>Personal Details</legend>
+        
+            
+                <label for=name>Name</label>
+ 
+                <input id=name name="name" type="text" placeholder="First and last name" required autofocus />
+            <br><br>
+            
+                <label for=id>Book'ID</label>
+                <input id=id name=id  required />
+            <br><br>
+            
+                <label for=phone>Phone</label>
+                <input id=phone name="phone" type="tel" required />
+            
+        
+    </fieldset>
+    
+    <fieldset>
+        <legend>Payment</legend>
+        
+            <fieldset>
+            
+                <legend>Card Type</legend><br>
+            
+                    
+                        <input id=visa name=cardtype type=radio />
+                        <label for=visa>VISA</label>
+                    
+                    
+                        <input id=amex name=cardtype type=radio />
+                        <label for=amex>AmEx</label>
+                    
+                    
+                        <input id=mastercard name=cardtype type=radio />
+                        <label for=mastercard>Mastercard</label>
+                    
+            
+           <br>
+            <br>
+        <label for=namecard>Name on Card</label>
+                <input id="namecard" name="namecard" type="text" placeholder="Exact name as on the card"/><br><br>
+        
+               
+                
+                <label for=cardnumber>Card Number</label>
+                <input id=cardnumber name=cardnumber type=text />
+            <br><br>
+        <label for=secure>CVV</label>
+                <input id=secure name=secure type=text />
+            <br><br>
+        
+        </fieldset>
+    
+        <center><h3>OR</h3></center>
+        <fieldset>
+    <label for="paytm">PAYtm no.</label>
+          <input type="text" name="paytm" />
+           <br><br>                                     
+            
+             <label for="psswd">Password</label>
+          <input  type="password" name="psswd" />
+           <br><br>  
+        </fieldset>
+        </fieldset>
+        <br>
+        <input type="submit">
+    
+    </div>
+</form>
+</section>
+        </center>
+    </body>
+</html>
